@@ -1,4 +1,4 @@
-Program vyuÌv· knihoven 
+Program vyu≈æ√≠v√° knihoven 
 -Pygame 1.9.6
 --https://www.pygame.org/download.shtml
 
