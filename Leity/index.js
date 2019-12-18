@@ -1,9 +1,11 @@
 window.addEventListener("scroll", HeaderScrl);
+window.addEventListener("resize", BrowerResized);
 let header = document.getElementById("header");
 let subheader = document.getElementById("subheader");
 let section = document.getElementById("sec1");
 let scrld = header.offsetTop;
-let width = window.innerWidth;
+let width;
+
 function HeaderScrl() {
   if (window.pageYOffset > scrld) {
     if (width >= 811) {
@@ -22,6 +24,10 @@ function HeaderScrl() {
     section.classList.remove("lowerheight");
     section.classList.add("higherheight");
   }
+}
+
+function BrowerResized() {
+  width = window.innerWidth;
 }
 
 /*
