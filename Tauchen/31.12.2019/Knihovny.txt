@@ -1,0 +1,6 @@
+Program využívá knihoven 
+-Pygame 1.9.6
+--https://www.pygame.org/download.shtml
+
+-PyOpenGL
+--https://pypi.org/project/PyOpenGL/#files
