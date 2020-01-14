@@ -100,14 +100,17 @@ header {
   }
 }
 
-.mobile {
+#mobile-header {
   display: none;
   width: 100%;
   height: 80px;
-  justify-content: center;
-  align-items: center;
   padding: 0 40px;
   z-index: 9999;
+  .top-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
   .mobile {
     width: 100%;
     ul {
@@ -142,7 +145,6 @@ header {
   }
 }
 .scrolled {
-  /*header*/
   position: fixed;
   top: 0;
   left: 0;
@@ -293,34 +295,12 @@ section {
 }
 
 /*MEDIA SCREEN / PHONE*/
-@media screen and (max-width: 810px) {
+@media screen and (max-width: 900px) {
   header {
     display: none;
   }
   #mobile-header {
-    display: inherit;
-    h1 {
-      font-size: 24px;
-    }
-    .logo {
-      font-size: 22px;
-    }
-    .info {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    .nav {
-      display: none;
-    }
-  }
-  .mobile {
-    display: flex;
-    .mobile {
-      ul li a {
-        font-size: 16px;
-      }
-    }
+    display: block;
   }
   #sec1 {
     justify-content: center;

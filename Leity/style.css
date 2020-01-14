@@ -130,25 +130,31 @@ header .logo span {
   color: #fff;
 }
 
-.mobile {
+#mobile-header {
   display: none;
   width: 100%;
   height: 80px;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   padding: 0 40px;
   z-index: 9999;
 }
 
-.mobile .mobile {
+#mobile-header .top-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#mobile-header .mobile {
   width: 100%;
 }
 
-.mobile .mobile ul {
+#mobile-header .mobile ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -157,27 +163,27 @@ header .logo span {
           justify-content: space-between;
 }
 
-.mobile .mobile ul li a {
+#mobile-header .mobile ul li a {
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
 
-.mobile .mobile ul li a:hover {
+#mobile-header .mobile ul li a:hover {
   color: #dddddd;
 }
 
-.mobile .nav-list-mobile li {
+#mobile-header .nav-list-mobile li {
   list-style: none;
 }
 
-.mobile .nav-list-mobile li .nav-link-mobile {
+#mobile-header .nav-list-mobile li .nav-link-mobile {
   position: relative;
   color: #fff;
   text-decoration: none;
   padding-bottom: 5px;
 }
 
-.mobile .nav-list-mobile li .active::before {
+#mobile-header .nav-list-mobile li .active::before {
   content: "";
   position: absolute;
   width: 50%;
@@ -189,7 +195,6 @@ header .logo span {
 }
 
 .scrolled {
-  /*header*/
   position: fixed;
   top: 0;
   left: 0;
@@ -395,40 +400,12 @@ section {
 }
 
 /*MEDIA SCREEN / PHONE*/
-@media screen and (max-width: 810px) {
+@media screen and (max-width: 900px) {
   header {
     display: none;
   }
   #mobile-header {
-    display: inherit;
-  }
-  #mobile-header h1 {
-    font-size: 24px;
-  }
-  #mobile-header .logo {
-    font-size: 22px;
-  }
-  #mobile-header .info {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
-  #mobile-header .nav {
-    display: none;
-  }
-  .mobile {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
-  .mobile .mobile ul li a {
-    font-size: 16px;
+    display: block;
   }
   #sec1 {
     -webkit-box-pack: center;
