@@ -6,15 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <meta name="author" content="Filip Leity" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="style.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css"
     />
-    <link rel="stylesheet" href="style.css" />
     <link
       href="https://fonts.googleapis.com/css?family=Montserrat:400,500&display=swap"
       rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/css/swiper.min.css"
     />
     <title>Leity | Portfolio</title>
   </head>
@@ -31,16 +38,22 @@
       </nav>
       <p class="logo"><span><</span><span>/</span><span>></span></p>
     </header>
-    <div id="subheader" class="subheader">
-      <nav class="mobile">
-        <ul class="nav-list-mobile">
-          <li><a href="#sec1" class="nav-link-mobile active">Home</a></li>
-          <li><a href="#test" class="nav-link-mobile">Projects</a></li>
-          <li><a href="#sec3" class="nav-link-mobile">About</a></li>
-          <li><a href="#sec4" class="nav-link-mobile">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
+    <header id="mobile-header">
+      <div class="top-row">
+        <a href="./index.html"><h1>Portfolio</h1></a>
+        <p class="logo"><span><</span><span>/</span><span>></span></p>
+      </div>
+      <div class="bottom-row">
+        <nav class="mobile">
+          <ul class="nav-list-mobile">
+            <li><a href="#sec1" class="nav-link-mobile active">Home</a></li>
+            <li><a href="#test" class="nav-link-mobile">Projects</a></li>
+            <li><a href="#sec3" class="nav-link-mobile">About</a></li>
+            <li><a href="#sec4" class="nav-link-mobile">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
 
     <main>
       <section id="sec1">
@@ -48,35 +61,42 @@
           <h1>Filip Leity</h1>
           <p>Junior Web Developer</p>
           <p>"Creating good looking designs and other stuff"</p>
-          <button onclick="window.location.href='#test'">View Projects</button>
+          <button>View Projects</button>
         </div>
-        <div class="triangles">
-          <img class="i1" src="./Imgs/Triangle1.svg" alt="Triangle" />
-          <img class="i2" src="./Imgs/Triangle2.svg" alt="Triangle" />
-          <img class="i3" src="./Imgs/Triangle3.svg" alt="Triangle" />
+        <div class="pointer">
+          <svg
+            width="30"
+            height="25"
+            viewBox="-2.5 -5 75 60"
+            preserveAspectRatio="none"
+          >
+            <path
+              d="M0,0 l35,50 l35,-50"
+              fill="none"
+              stroke="white"
+              stroke-linecap="round"
+              stroke-width="8"
+            />
+          </svg>
         </div>
       </section>
+
       <section id="sec2">
-        <div class="title">
+        <div data-aos="fade-right" class="sec-title">
           <h2>Projects</h2>
         </div>
-        <div class="content">
-          <div class="left">
-            <i class="fas fa-arrow-circle-left"></i>
-          </div>
+        <div data-aos="fade-left" class="content">
           <div class="project p-1"></div>
           <div class="project p-2"></div>
           <div class="project p-3"></div>
-          <div class="right">
-            <i class="fas fa-arrow-circle-right"></i>
-          </div>
         </div>
         <div id="test"></div>
       </section>
       <section id="sec3"></section>
       <section id="sec4"></section>
     </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/js/swiper.min.js"></script>
     <script src="./index.js"></script>
-    <script src="./jquery.scrollify.js"></script>
   </body>
 </html>

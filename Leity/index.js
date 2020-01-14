@@ -1,3 +1,6 @@
+//AOS//
+AOS.init();
+/*
 window.addEventListener("scroll", HeaderScrl);
 window.addEventListener("resize", BrowerResized);
 let header = document.getElementById("header");
@@ -25,14 +28,18 @@ function HeaderScrl() {
     section.classList.add("higherheight");
   }
 }
-
 function BrowerResized() {
   width = window.innerWidth;
-}
+}*/
 
-/*
-$(function() {
-  $.scrollify({
-    section: "section"
-  });
-});*/
+window.addEventListener("scroll", ScrolledNav);
+let header = document.getElementById("header");
+let offset = header.offsetTop;
+
+function ScrolledNav() {
+  if (window.pageYOffset > offset) {
+    header.classList.add("scrolled");
+  } else {
+    header.classList.remove("scrolled");
+  }
+}
