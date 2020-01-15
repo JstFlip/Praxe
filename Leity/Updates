@@ -2,11 +2,10 @@
 18.12.2019 - UX: Simplified menu
              UI: Fixed triangles position on media screen
                  New scrollbar
-                 After scroll, header become fixed, and sections arrive closer to home
-                 Support for device screen with minimal width 240px
+                 After scroll, header becomes fixed
 
-            In Progress:
-                 Horizontal scroll in projects sections
+15.01.2020 - JS: AOS, Swiper, StickyBar
+             UI: Responsive NavBar
 
                  
                  
