@@ -1,4 +1,4 @@
-//Sticky NavBar #Header#//
+//Sticky NavBar//
 let header = document.getElementById("header");
 let mobileHeader = document.getElementById("mobile-header");
 let pointer = document.getElementsByClassName("pointer");
@@ -29,6 +29,7 @@ window.addEventListener("scroll", ScrolledNav);
 //AOS//
 AOS.init({});
 
+//Swiper Projects//
 var Swiper = new Swiper(".swiper-container", {
   effect: "coverflow",
   grabCursor: true,
