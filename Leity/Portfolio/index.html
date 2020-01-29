@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Junior Web Developer" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="author" content="Filip Leity" />
+    <link rel="icon" href="./favicon.png" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat:400,500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/css/swiper.min.css"
+    />
+    <title>Leity | Portfolio</title>
+    <script src="https://cdn.jsdelivr.net/npm/p5@0.10.2/lib/p5.min.js"></script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header id="header">
+        <a href="./index.html"><h1>Portfolio</h1></a>
+        <nav class="nav">
+          <ul class="nav-list">
+            <li><a href="#Home" class="nav-link active">Home</a></li>
+            <li><a href="#Projects" class="nav-link">Projects</a></li>
+            <li><a href="#About" class="nav-link">About</a></li>
+            <li><a href="#Contact" class="nav-link">Contact</a></li>
+          </ul>
+        </nav>
+        <p class="logo"><span><</span><span>/</span><span>></span></p>
+      </header>
+      <header id="mobile-header">
+        <div class="top-row">
+          <a href="./index.html"><h1>Portfolio</h1></a>
+          <p class="logo"><span><</span><span>/</span><span>></span></p>
+        </div>
+        <div class="bottom-row">
+          <nav class="mobile">
+            <ul class="nav-list-mobile">
+              <li><a href="#Home" class="nav-link-mobile active">Home</a></li>
+              <li><a href="#Projects" class="nav-link-mobile">Projects</a></li>
+              <li><a href="#About" class="nav-link-mobile">About</a></li>
+              <li><a href="#Contact" class="nav-link-mobile">Contact</a></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+
+      <main>
+        <section id="sec1">
+          <div id="particles"></div>
+          <div id="Home" class="hidden"></div>
+          <div class="info">
+            <h1>Filip Leity</h1>
+            <p>Junior Web Developer</p>
+            <p>"Creating good looking designs and other stuff"</p>
+            <button onclick="window.location.href='#Projects'">
+              View Projects
+            </button>
+          </div>
+          <div class="pointer">
+            <svg
+              width="30"
+              height="25"
+              viewBox="-2.5 -5 75 60"
+              preserveAspectRatio="none"
+            >
+              <path
+                d="M0,0 l35,50 l35,-50"
+                fill="none"
+                stroke="white"
+                stroke-linecap="round"
+                stroke-width="8"
+              />
+            </svg>
+          </div>
+        </section>
+
+        <section id="sec2">
+          <div id="Projects" class="hidden"></div>
+          <div data-aos="fade-right" class="sec-title">
+            <h2>Projects</h2>
+          </div>
+          <div data-aos="fade-left" class="swiper-container">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide"></div>
+              <div class="swiper-slide"></div>
+              <div class="swiper-slide"></div>
+              <div class="swiper-slide"></div>
+              <div class="swiper-slide"></div>
+              <div class="swiper-slide"></div>
+            </div>
+            <div
+              class="project-btn swiper-button-prev swiper-button-white"
+            ></div>
+            <div class="asd swiper-button-next swiper-button-white"></div>
+          </div>
+        </section>
+
+        <section id="sec3">
+          <div id="About" class="hidden"></div>
+          <div data-aos="fade-right" class="sec-title">
+            <h2>About me</h2>
+          </div>
+        </section>
+
+        <section id="sec4">
+          <div id="Contact" class="hidden"></div>
+          <div data-aos="fade-right" class="sec-title">
+            <h2>Contact</h2>
+          </div>
+          <form action="#" method="POST" class="contact">
+            <div class="name">
+              <label>Your Name:</label>
+              <input type="text" name="name" required />
+            </div>
+            <div class="mail">
+              <label>Your Mail:</label>
+              <input type="email" name="email_address" required />
+            </div>
+            <div class="msg">
+              <label>Your Message:</label>
+              <textarea name="message" maxlength="500"></textarea>
+            </div>
+            <button type="submit">Send</button>
+          </form>
+        </section>
+      </main>
+      <!--<script src="./particles.js"></script>-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/js/swiper.min.js"></script>
+      <script src="./index.js"></script>
+    </div>
+  </body>
+</html>
