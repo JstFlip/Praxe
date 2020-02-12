@@ -16,16 +16,11 @@ body {
   background: -webkit-gradient(linear, left top, right top, from(#000), color-stop(60%, #0d0116), color-stop(120%, #17022a));
   background: linear-gradient(to right, #000, #0d0116 60%, #17022a 120%);
   font-family: "Montserrat", sans-serif;
+  overflow-x: hidden;
 }
 
 .wrapper {
   overflow-x: hidden;
-}
-
-canvas {
-  position: absolute;
-  width: 100%;
-  height: 100%;
 }
 
 header {
@@ -252,7 +247,14 @@ header .logo span {
   background: #000;
 }
 
+#particleCanvas {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
 main {
+  position: relative;
   padding: 0 40px;
 }
 
@@ -276,6 +278,23 @@ section {
       -ms-flex-direction: column;
           flex-direction: column;
   padding-top: 80px;
+}
+
+#sec1 .bgnGreeting {
+  position: absolute;
+  top: 150px;
+  left: 350px;
+  width: 100%;
+  height: 100%;
+}
+
+#sec1 .bgnGreeting .hello {
+  color: #fff;
+  font-size: 24rem;
+  letter-spacing: 10px;
+  text-transform: uppercase;
+  font-weight: bold;
+  opacity: 0.1;
 }
 
 #sec1 .pointer {
@@ -318,8 +337,8 @@ section {
 
 #sec1 .info button {
   margin-top: 22px;
-  background: -webkit-gradient(linear, right top, left top, from(#000), color-stop(30%, #0d0116), color-stop(80%, #17022a));
-  background: linear-gradient(to left, #000, #0d0116 30%, #17022a 80%);
+  background: -webkit-gradient(linear, right top, left top, from(#000), color-stop(30%, #0d0116), color-stop(80%, #170329));
+  background: linear-gradient(to left, #000, #0d0116 30%, #170329 80%);
   border: 2px solid white;
   border-radius: 45px;
   padding: 12px 32px;
@@ -328,6 +347,8 @@ section {
   font-size: 14px;
   position: relative;
   outline: none;
+  -webkit-transition: 0.3s linear;
+  transition: 0.3s linear;
 }
 
 #sec1 .info button::before,
@@ -339,8 +360,8 @@ section {
   bottom: -5px;
   left: -5px;
   right: -5px;
-  background: -webkit-gradient(linear, left top, right top, from(#3d3d3d), to(#370061));
-  background: linear-gradient(to right, #3d3d3d, #370061);
+  background: -webkit-gradient(linear, left top, right top, from(#3d3d3d), to(#3f0968));
+  background: linear-gradient(to right, #3d3d3d, #3f0968);
   -webkit-filter: blur(8px);
           filter: blur(8px);
   z-index: -1;
@@ -358,8 +379,7 @@ section {
 }
 
 #sec2 {
-  min-height: 30vh;
-  max-height: 30vh;
+  min-height: 40vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -367,18 +387,15 @@ section {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 20px 0;
+  padding: 20px 0 60px 0;
 }
 
 #sec2 .swiper-container {
   width: 100%;
-  padding: 50px 0;
+  margin: 50px 0;
 }
 
 #sec2 .swiper-container .swiper-slide {
@@ -396,14 +413,19 @@ section {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  min-height: 30vh;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 60vh;
+  padding: 20px 0 60px 0;
 }
 
 #sec4 {
-  min-height: 50vh;
+  min-height: 70vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -414,17 +436,16 @@ section {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  padding: 20px 0;
+  padding: 20px 0 60px 0;
 }
 
 #sec4 .contact {
+  margin: 50px 0;
   width: 650px;
   height: 450px;
   border-radius: 22px;
-  background: -webkit-gradient(linear, right top, left top, from(#000), color-stop(30%, #0d0116), color-stop(80%, #17022a));
-  background: linear-gradient(to left, #000, #0d0116 30%, #17022a 80%);
+  background: -webkit-gradient(linear, right top, left top, from(#000), color-stop(30%, #0d0116), color-stop(80%, #170329));
+  background: linear-gradient(to left, #000, #0d0116 30%, #170329 80%);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -441,44 +462,58 @@ section {
 }
 
 #sec4 .contact label {
-  position: absolute;
   font-size: 1rem;
+  font-family: "Montserrat", sans-serif;
+  position: absolute;
   color: #fff;
-  padding-bottom: 3px;
 }
 
 #sec4 .contact input {
-  color: #fff;
+  font-family: "Montserrat", sans-serif;
   font-size: 1rem;
+  color: #fff;
+  min-height: 25px;
+  min-width: 480px;
   background: none;
   border: none;
   border-bottom: 3px solid #fff;
+  padding: 0 0 10px 100px;
   outline: none;
-  min-width: 490px;
-  padding-bottom: 3px;
-  padding-top: 1.5rem;
+  -webkit-transition: all 0.22s;
+  transition: all 0.22s;
+}
+
+#sec4 .contact input:focus {
+  border-color: #772ea8;
 }
 
 #sec4 .contact textarea {
-  outline: none;
-  max-width: 490px;
-  min-width: 490px;
-  min-height: 100px;
-  max-height: 180px;
+  min-width: 480px;
+  max-width: 480px;
+  min-height: 150px;
+  max-height: 150px;
   background: none;
-  color: #fff;
   border: none;
   border-bottom: 3px solid #fff;
-  padding-top: 1.5rem;
+  outline: none;
+  color: #ffff;
+  margin-top: 30px;
+  font-size: 1rem;
+  -webkit-transition: all 0.22s;
+  transition: all 0.22s;
+}
+
+#sec4 .contact textarea:focus {
+  border-color: #772ea8;
 }
 
 #sec4 .contact button {
-  width: 132px;
+  width: 140px;
   height: 42px;
   background: none;
-  border: 2px solid #fff;
-  outline: none;
+  border: 2px solid white;
   color: #fff;
+  font-size: 1rem;
   cursor: pointer;
 }
 
@@ -522,6 +557,9 @@ section {
         -ms-flex-align: center;
             align-items: center;
     padding-top: 120px;
+  }
+  #sec1 .bgnGreeting {
+    display: none;
   }
   #sec1 .info {
     margin: 0px;

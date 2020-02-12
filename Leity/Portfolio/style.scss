@@ -1,5 +1,5 @@
 $GradC: linear-gradient(to right, #000, #0d0116 60%, #17022a 120%);
-$GradCR: linear-gradient(to left, #000, #0d0116 30%, #17022a 80%);
+$GradCR: linear-gradient(to left, #000, #0d0116 30%, #170329 80%);
 *,
 *::before,
 *::after {
@@ -14,14 +14,10 @@ body {
   min-height: 100vh;
   background: $GradC;
   font-family: "Montserrat", sans-serif;
+  overflow-x: hidden;
 }
 .wrapper {
   overflow-x: hidden;
-}
-canvas {
-  position: absolute;
-  width: 100%;
-  height: 100%;
 }
 header {
   position: fixed;
@@ -196,7 +192,14 @@ header {
   }
 }
 
+#particleCanvas {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
 main {
+  position: relative;
   padding: 0 40px;
 }
 section {
@@ -212,6 +215,21 @@ section {
   display: flex;
   flex-direction: column;
   padding-top: 80px;
+  .bgnGreeting {
+    position: absolute;
+    top: 150px;
+    left: 350px;
+    width: 100%;
+    height: 100%;
+    .hello {
+      color: #fff;
+      font-size: 24rem;
+      letter-spacing: 10px;
+      text-transform: uppercase;
+      font-weight: bold;
+      opacity: 0.1;
+    }
+  }
   .pointer {
     margin-top: auto;
     margin-bottom: 28px;
@@ -250,6 +268,7 @@ section {
       font-size: 14px;
       position: relative;
       outline: none;
+      transition: 0.3s linear;
       //box-shadow: 0px 0px 25px #17022a, 0px 0px 25px #8d8d8d;
     }
     button::before,
@@ -261,7 +280,7 @@ section {
       bottom: -5px;
       left: -5px;
       right: -5px;
-      background: linear-gradient(to right, rgb(61, 61, 61), #370061);
+      background: linear-gradient(to right, rgb(61, 61, 61), #3f0968);
       filter: blur(8px);
       z-index: -1;
     }
@@ -278,16 +297,14 @@ section {
   }
 }
 #sec2 {
-  min-height: 30vh;
-  max-height: 30vh;
+  min-height: 40vh;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   align-items: center;
-  padding: 20px 0;
+  padding: 20px 0 60px 0;
   .swiper-container {
     width: 100%;
-    padding: 50px 0;
+    margin: 50px 0;
     .swiper-slide {
       height: 180px;
       width: 200px;
@@ -299,19 +316,23 @@ section {
     }
   }
 }
+
 #sec3 {
-  display: flex;
-  justify-content: center;
-  min-height: 30vh;
-}
-#sec4 {
-  min-height: 50vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-around;
-  padding: 20px 0;
+  min-height: 60vh;
+  padding: 20px 0 60px 0;
+}
+
+#sec4 {
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 0 60px 0;
   .contact {
+    margin: 50px 0;
     width: 650px;
     height: 450px;
     border-radius: 22px;
@@ -321,41 +342,51 @@ section {
     align-items: center;
     justify-content: space-evenly;
     label {
-      position: absolute;
       font-size: 1rem;
+      font-family: "Montserrat", sans-serif;
+      position: absolute;
       color: #fff;
-      padding-bottom: 3px;
     }
     input {
-      color: #fff;
+      font-family: "Montserrat", sans-serif;
       font-size: 1rem;
+      color: #fff;
+      min-height: 25px;
+      min-width: 480px;
       background: none;
       border: none;
       border-bottom: 3px solid #fff;
+      padding: 0 0 10px 100px;
       outline: none;
-      min-width: 490px;
-      padding-bottom: 3px;
-      padding-top: 1.5rem;
+      transition: all 0.22s;
+    }
+    input:focus {
+      border-color: rgb(119, 46, 168);
     }
     textarea {
-      outline: none;
-      max-width: 490px;
-      min-width: 490px;
-      min-height: 100px;
-      max-height: 180px;
+      min-width: 480px;
+      max-width: 480px;
+      min-height: 150px;
+      max-height: 150px;
       background: none;
-      color: #fff;
       border: none;
       border-bottom: 3px solid #fff;
-      padding-top: 1.5rem;
+      outline: none;
+      color: #ffff;
+      margin-top: 30px;
+      font-size: 1rem;
+      transition: all 0.22s;
+    }
+    textarea:focus {
+      border-color: rgb(119, 46, 168);
     }
     button {
-      width: 132px;
+      width: 140px;
       height: 42px;
       background: none;
-      border: 2px solid #fff;
-      outline: none;
+      border: 2px solid rgb(255, 255, 255);
       color: #fff;
+      font-size: 1rem;
       cursor: pointer;
     }
   }
@@ -394,6 +425,9 @@ section {
     justify-content: center;
     align-items: center;
     padding-top: 120px;
+    .bgnGreeting {
+      display: none;
+    }
     .info {
       margin: 0px;
       margin-top: 40px;

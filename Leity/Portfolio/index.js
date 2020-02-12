@@ -1,9 +1,9 @@
-//Sticky NavBar//
+//Sticky NavBar #Header#//
 let header = document.getElementById("header");
 let mobileHeader = document.getElementById("mobile-header");
 let pointer = document.getElementsByClassName("pointer");
 let offset = header.offsetTop;
-let width;
+let width = window.innerWidth;
 
 function windowResize() {
   width = window.innerWidth;
@@ -29,7 +29,6 @@ window.addEventListener("scroll", ScrolledNav);
 //AOS//
 AOS.init({});
 
-//Swiper Projects//
 var Swiper = new Swiper(".swiper-container", {
   effect: "coverflow",
   grabCursor: true,

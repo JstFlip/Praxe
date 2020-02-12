@@ -25,7 +25,6 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/css/swiper.min.css"
     />
     <title>Leity | Portfolio</title>
-    <script src="https://cdn.jsdelivr.net/npm/p5@0.10.2/lib/p5.min.js"></script>
   </head>
   <body>
     <div class="wrapper">
@@ -33,10 +32,22 @@
         <a href="./index.html"><h1>Portfolio</h1></a>
         <nav class="nav">
           <ul class="nav-list">
-            <li><a href="#Home" class="nav-link active">Home</a></li>
-            <li><a href="#Projects" class="nav-link">Projects</a></li>
-            <li><a href="#About" class="nav-link">About</a></li>
-            <li><a href="#Contact" class="nav-link">Contact</a></li>
+            <li>
+              <a data-page="home" href="#Home" class="nav-link active">Home</a>
+            </li>
+            <li>
+              <a data-page="projects" href="#Projects" class="nav-link"
+                >Projects</a
+              >
+            </li>
+            <li>
+              <a data-page="about" href="#About" class="nav-link">About</a>
+            </li>
+            <li>
+              <a data-page="contact" href="#Contact" class="nav-link"
+                >Contact</a
+              >
+            </li>
           </ul>
         </nav>
         <p class="logo"><span><</span><span>/</span><span>></span></p>
@@ -57,11 +68,13 @@
           </nav>
         </div>
       </header>
-
+      <div id="particleCanvas"></div>
       <main>
-        <section id="sec1">
-          <div id="particles"></div>
+        <section data-index="0" class="home" id="sec1">
           <div id="Home" class="hidden"></div>
+          <div class="bgnGreeting">
+            <p class="hello">Hello</p>
+          </div>
           <div class="info">
             <h1>Filip Leity</h1>
             <p>Junior Web Developer</p>
@@ -88,7 +101,7 @@
           </div>
         </section>
 
-        <section id="sec2">
+        <section data-index="1" class="projects" id="sec2">
           <div id="Projects" class="hidden"></div>
           <div data-aos="fade-right" class="sec-title">
             <h2>Projects</h2>
@@ -105,30 +118,35 @@
             <div
               class="project-btn swiper-button-prev swiper-button-white"
             ></div>
-            <div class="asd swiper-button-next swiper-button-white"></div>
+            <div class="swiper-button-next swiper-button-white"></div>
           </div>
         </section>
 
-        <section id="sec3">
+        <section data-index="2" class="about" id="sec3">
           <div id="About" class="hidden"></div>
           <div data-aos="fade-right" class="sec-title">
             <h2>About me</h2>
           </div>
         </section>
 
-        <section id="sec4">
+        <section data-index="3" class="contact" id="sec4">
           <div id="Contact" class="hidden"></div>
           <div data-aos="fade-right" class="sec-title">
             <h2>Contact</h2>
           </div>
-          <form action="#" method="POST" class="contact">
+          <form
+            data-aos="fade-left"
+            action="./form.php"
+            method="POST"
+            class="contact"
+          >
             <div class="name">
               <label>Your Name:</label>
               <input type="text" name="name" required />
             </div>
             <div class="mail">
               <label>Your Mail:</label>
-              <input type="email" name="email_address" required />
+              <input type="email" name="emailAddress" required />
             </div>
             <div class="msg">
               <label>Your Message:</label>
@@ -138,10 +156,11 @@
           </form>
         </section>
       </main>
-      <!--<script src="./particles.js"></script>-->
       <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/js/swiper.min.js"></script>
       <script src="./index.js"></script>
+      <script src="./p5.min.js"></script>
+      <script src="./particles.js"></script>
     </div>
   </body>
 </html>
