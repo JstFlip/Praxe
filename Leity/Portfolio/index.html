@@ -8,22 +8,10 @@
     <meta name="author" content="Filip Leity" />
     <link rel="icon" href="./favicon.png" />
     <link rel="stylesheet" href="style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Montserrat:400,500&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/css/swiper.min.css"
-    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" />
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500&display=swap" rel="stylesheet" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/css/swiper.min.css" />
     <title>Leity | Portfolio</title>
   </head>
   <body>
@@ -33,20 +21,16 @@
         <nav class="nav">
           <ul class="nav-list">
             <li>
-              <a data-page="home" href="#Home" class="nav-link active">Home</a>
+              <a href="#home" class="nav-link active">Home</a>
             </li>
             <li>
-              <a data-page="projects" href="#Projects" class="nav-link"
-                >Projects</a
-              >
+              <a href="#projects" class="nav-link">Projects</a>
             </li>
             <li>
-              <a data-page="about" href="#About" class="nav-link">About</a>
+              <a href="#about" class="nav-link">About</a>
             </li>
             <li>
-              <a data-page="contact" href="#Contact" class="nav-link"
-                >Contact</a
-              >
+              <a href="#contact" class="nav-link">Contact</a>
             </li>
           </ul>
         </nav>
@@ -60,49 +44,33 @@
         <div class="bottom-row">
           <nav class="mobile">
             <ul class="nav-list-mobile">
-              <li><a href="#Home" class="nav-link-mobile active">Home</a></li>
-              <li><a href="#Projects" class="nav-link-mobile">Projects</a></li>
-              <li><a href="#About" class="nav-link-mobile">About</a></li>
-              <li><a href="#Contact" class="nav-link-mobile">Contact</a></li>
+              <li><a href="#home" class="nav-link-mobile active">Home</a></li>
+              <li><a href="#projects" class="nav-link-mobile">Projects</a></li>
+              <li><a href="#about" class="nav-link-mobile">About</a></li>
+              <li><a href="#contact" class="nav-link-mobile">Contact</a></li>
             </ul>
           </nav>
         </div>
       </header>
       <div id="particleCanvas"></div>
       <main>
-        <section data-index="0" class="home" id="sec1">
-          <div id="Home" class="hidden"></div>
-          <div class="bgnGreeting">
-            <p class="hello">Hello</p>
-          </div>
+        <section class="home" id="home">
           <div class="info">
-            <h1>Filip Leity</h1>
+            <h1>Hello. I'm Filip</h1>
             <p>Junior Web Developer</p>
-            <p>"Creating good looking designs and other stuff"</p>
-            <button onclick="window.location.href='#Projects'">
+            <p>"Just doing stuff"</p>
+            <button onclick="window.location.href='#projects'">
               View Projects
             </button>
           </div>
           <div class="pointer">
-            <svg
-              width="30"
-              height="25"
-              viewBox="-2.5 -5 75 60"
-              preserveAspectRatio="none"
-            >
-              <path
-                d="M0,0 l35,50 l35,-50"
-                fill="none"
-                stroke="white"
-                stroke-linecap="round"
-                stroke-width="8"
-              />
+            <svg width="30" height="25" viewBox="-2.5 -5 75 60" preserveAspectRatio="none">
+              <path d="M0,0 l35,50 l35,-50" fill="none" stroke="white" stroke-linecap="round" stroke-width="8" />
             </svg>
           </div>
         </section>
 
-        <section data-index="1" class="projects" id="sec2">
-          <div id="Projects" class="hidden"></div>
+        <section class="projects" id="projects">
           <div data-aos="fade-right" class="sec-title">
             <h2>Projects</h2>
           </div>
@@ -115,31 +83,55 @@
               <div class="swiper-slide"></div>
               <div class="swiper-slide"></div>
             </div>
-            <div
-              class="project-btn swiper-button-prev swiper-button-white"
-            ></div>
+            <div class="project-btn swiper-button-prev swiper-button-white"></div>
             <div class="swiper-button-next swiper-button-white"></div>
           </div>
         </section>
 
-        <section data-index="2" class="about" id="sec3">
-          <div id="About" class="hidden"></div>
+        <section class="about" id="about">
           <div data-aos="fade-right" class="sec-title">
             <h2>About me</h2>
           </div>
+          <div class="container">
+            <div data-aos="fade-down" class="card card-html">
+              <div class="card-title">
+                <i class="icon fab fa-html5"></i>
+                <span>HTML</span>
+              </div>
+              <div class="card-info">
+                <p>
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quae quia porro quas, vitae laudantium itaque!
+                </p>
+              </div>
+            </div>
+            <div data-aos="fade-down" data-aos-delay="200" class="card card-css">
+              <div class="card-title">
+                <i class="icon fab fa-css3-alt"></i>
+                <span>CSS</span>
+              </div>
+              <div class="card-info">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit laudantium fugiat perspiciatis hic cupiditate quis, assumenda impedit quibusdam incidunt repudiandae?</p>
+              </div>
+            </div>
+            <div data-aos="fade-down" data-aos-delay="400" data-aos-easing="fade-up" class="card card-js">
+              <div class="card-title">
+                <i class="icon fab fa-js"></i>
+                <span>JAVASCRIPT</span>
+              </div>
+              <div class="card-info">
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam recusandae, consectetur dolores inventore aut hic asperiores enim.
+                </p>
+              </div>
+            </div>
+          </div>
         </section>
 
-        <section data-index="3" class="contact" id="sec4">
-          <div id="Contact" class="hidden"></div>
+        <section class="contact" id="contact">
           <div data-aos="fade-right" class="sec-title">
             <h2>Contact</h2>
           </div>
-          <form
-            data-aos="fade-left"
-            action="./form.php"
-            method="POST"
-            class="contact"
-          >
+          <form data-aos="fade-left" action="./form.php" method="POST" class="contact">
             <div class="name">
               <label>Your Name:</label>
               <input type="text" name="name" required />
@@ -156,11 +148,11 @@
           </form>
         </section>
       </main>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+      <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/js/swiper.min.js"></script>
+      <!--<script src="./p5.min.js"></script>
+      <script src="./particles.js"></script>-->
       <script src="./index.js"></script>
-      <script src="./p5.min.js"></script>
-      <script src="./particles.js"></script>
     </div>
   </body>
 </html>
